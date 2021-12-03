@@ -6,10 +6,11 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import SubNav from './search-subnav/SubNav';
 import HeaderContainer from '../containers/HeaderContainer';
 import IssuesTable from './issues-table/IssuesTable';
 import IssuesDetail from './issue-detail/IssueDetail';
+import Footer from './header/Footer';
+
 
 const Container = styled.div`
   font-size : 14px;
@@ -30,7 +31,7 @@ const App = () => (
   <Container>
     <HeaderContainer />
     <IssueListingContainer>
-      <SubNav />
+   
       <Router>
         <Switch>
           <Route exact path="/" component={IssuesTable} />
@@ -39,6 +40,7 @@ const App = () => (
         </Switch>
       </Router>
     </IssueListingContainer>
+<Footer/>
   </Container>
 );
 export default App;
